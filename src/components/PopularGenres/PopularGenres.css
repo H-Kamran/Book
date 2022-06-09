@@ -1,0 +1,159 @@
+@import-normalize;
+/* .popularGenres li:first-child {
+  background-color: red;
+  width: 100px;
+}
+.popularGenres li:first-child:hover {
+  outline: solid #fc0 2000px;
+  transition: outline 0.5s;
+} */
+.popularGenres-header {
+  margin-top: 15px;
+  color: var(--text-color);
+  text-align: center;
+}
+.popularGenres-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  list-style: none;
+  margin-top: 10px;
+  justify-content: space-around;
+  gap: 30px;
+}
+.popularGenres-header h2{
+  margin-bottom: 20px;
+}
+.popularGenres-list li {
+  border-radius: 10px;
+  background-color: var(--background-color-opaque);
+  text-align: center;
+  /* opacity: 0.5; */
+}
+.popularGenres-list .popularGenres-list-link {
+  display: block;
+  color: white;
+  width: 150px;
+  box-sizing: border-box;
+  /* background-color: var(--background-color); */
+  padding: 20px 40px;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-decoration: none;
+
+  /* transform-origin: bottom; */
+}
+/* .popularGenres-list .popularGenres-list-link {
+  color: inherit;
+} */
+.popularGenres-list li:nth-child(3n-2) {
+  grid-column-start: 2;
+}
+/* .popularGenres-list li:active {
+  outline: solid #fc0 2000px;
+  transition: outline 0.5s;
+} */
+
+.popularGenres-list li:hover {
+  /* animation-name: scale; */
+  /* animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; */
+  background-color: var(--background-color);
+  animation: scale 0.5s forwards;
+  animation-timing-function: ease;
+  cursor: pointer;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.popularGenres__button-div {
+  display: flex;
+}
+
+.more-button {
+  margin: auto;
+  /* background-color: #fff; */
+  /* background-color: rgb(8, 8, 204); */
+  /* background-color: rgb(236, 221, 7); */
+  background-color: #9e4700;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-sizing: border-box;
+  /* color: #121212; */
+  color: white;
+  cursor: pointer;
+
+  /* display: inline-flex;
+  flex: 1 1 auto; */
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem 1.2rem;
+
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+
+  border: 0;
+  user-select: none;
+  /* -webkit-user-select: none;
+  touch-action: manipulation; */
+}
+.more-button:hover {
+  /* box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0; */
+  /* box-shadow: #08cac1 0 0 0 3px, transparent 0 0 0 0; */
+  box-shadow: #666405 0 0 0 3px, transparent 0 0 0 0;
+}
+.clicked-more-button {
+  /* outline: solid #08cac1 2000px; */
+  outline: solid #3d1b00 2000px;
+  transition: outline 0.5s;
+}
+
+@media only screen and (max-width: 850px) {
+  .popularGenres-header h2{
+    font-size: 20px;
+  }
+  .popularGenres-list .popularGenres-list-link {
+    width: 120px;
+    padding: 15px 35px;
+    font-size: 12px;
+  }
+  .more-button {
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .popularGenres-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: baseline;
+    align-items: center;
+  }
+  .popularGenres-list li {
+    /* border-radius: 10px; */
+    width: 45%;
+    /* margin: auto; */
+  }
+  .popularGenres-list .popularGenres-list-link {
+    /* width: 150px; */
+    padding: 20px 40px;
+    margin: auto;
+  
+    /* transform-origin: bottom; */
+  }
+  .more-button {
+    margin-top: 20px;
+    /* border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.8rem 1rem; */
+  }
+}

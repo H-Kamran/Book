@@ -1,0 +1,17 @@
+/* .book-card .book-card__img {
+  position: relative;
+} */
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .books {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: unset;
+    align-items: center;
+  }
+}

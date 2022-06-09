@@ -1,0 +1,33 @@
+.book__img img {
+  width: 200px;
+}
+.book {
+  /* width: 55%; */
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.book__info {
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 50%; */
+}
+.book__info .author {
+  margin-top: 5px;
+  font-style: italic;
+}
+.book__info .description {
+  margin: auto;
+  margin-top: 40px;
+  width: 70%;
+}
+.book__info .published-date {
+  margin-top: 15px;
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  font-style: italic;
+}
