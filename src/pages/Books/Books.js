@@ -9,12 +9,11 @@ export default function Books() {
   const [books, setBooks] = useState([]);
   useEffect(() => {
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=subject:${q}&maxResults=20`
+      `https://www.googleapis.com/books/v1/volumes?q=subject:${q}&maxResults=40`
     )
       .then((response) => response.json())
       .then((data) => {
         setBooks(data.items);
-        // console.log(data);
       });
   }, [q]);
   if (books === null) {

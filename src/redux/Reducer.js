@@ -6,12 +6,6 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   let favBooks, book, id;
   switch (action.type) {
-    // case "DELETE_MOVIE":
-    //   allMovie = [];
-    //   return { ...state, allMovie };
-    // case "ADD_MOVIE":
-    //   allMovie = [...state.allMovie, action.payload];
-    //   return { ...state, allMovie };
     case "ADD_TO_FAVORITE":
       const r = state.favBooks.find((item) => item.id === action.payload.id);
       if (r === undefined) {
